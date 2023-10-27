@@ -1,10 +1,21 @@
+import { useLocation } from "react-router-dom"
 import Header from "../Header"
 import Main from "../Main"
 
-const Home = ({ loggedIn }) => {
+const Home =  () => {
+    const state = useLocation()
+    console.log(state)
+    console.log("*********************")
     return (
         <>
-            <Header showHeaderOptions={true} loggedIn={loggedIn} />
+            {
+                state.state
+                    ? state.state.loggedIn
+                    : false
+            }
+            <Header showHeaderOptions={true} isLoggedIn={state.state
+                    ? state.state.loggedIn
+                    : false}  />
             <Main/>
         </>
     )

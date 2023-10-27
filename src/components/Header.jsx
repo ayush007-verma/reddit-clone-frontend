@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import "./../css/Header.css"
 
-const Header = ({ showHeaderOptions, loggedIn }) => {
+const Header = ({ showHeaderOptions, isLoggedIn }) => {
     const navigate = useNavigate()
 
-    console.log("logged in home :-", loggedIn)
+    // console.log("logged in header :-", isLoggedIn)
 
     return (
         <header>
@@ -43,8 +43,8 @@ const Header = ({ showHeaderOptions, loggedIn }) => {
                     <div className="loggedInUserSection">
 
                         {
-                            loggedIn ?
-                                <button onClick={() => navigate("/login")}> <i class="fa-solid fa-user"></i> &nbsp; User </button>
+                            isLoggedIn ?
+                                    <button> <i className="fa-solid fa-user"></i> &nbsp; User </button>
                                 :
                                 <>
                                     <button onClick={() => navigate("/register")}>Register</button>

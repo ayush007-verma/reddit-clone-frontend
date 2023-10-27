@@ -21,9 +21,9 @@ const Login = () => {
             .catch((err) => console.log(err))
         const {message, loggedIn} = response
         
-        console.log(message, loggedIn)
+        // console.log(message, loggedIn)  
 
-        if(loggedIn) navigate("/", {loggedIn : loggedIn})
+        if(loggedIn) navigate("/", {state : { loggedIn : loggedIn}})
     }
 
     return (
