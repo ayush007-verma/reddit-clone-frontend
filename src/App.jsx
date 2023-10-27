@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Register from './Auth/Register'
 import Login from './Auth/Login'
+import Home from './components/Home/Home'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<><Header showHeaderOptions={true}/><Main/></>}/>
+          <Route path="/" element={<Home />}/>
           <Route path="/login" element={<><Header showHeaderOptions={false}/><Login/></>}/>
           <Route path="/register" element={<><Header showHeaderOptions={false}/><Register/></>}/>
         </Routes>
