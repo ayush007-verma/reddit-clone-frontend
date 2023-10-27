@@ -15,10 +15,15 @@ const Login = () => {
             email : loginEmail, 
             password : loginPassword
         }
-
+        var response  = {};
         await axios.post("http://localhost:8080/login", loginUser)
-            .then((res) => console.log(res.data))
+            .then((res) => response = res.data)
             .catch((err) => console.log(err))
+        const {message, loggedIn} = response
+        
+        console.log(message, loggedIn)
+
+        if(loggedIn) navigate("/", {loggedIn : loggedIn})
     }
 
     return (
