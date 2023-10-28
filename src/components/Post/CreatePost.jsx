@@ -12,7 +12,6 @@ const CreatePost = () => {
     const [postContent , setPostContent] = useState("")
     const [postUrl , setPostUrl] = useState("")
 
-
     const getRequestServer = async (e) => {
         e.preventDefault()
 
@@ -32,6 +31,8 @@ const CreatePost = () => {
         navigate("/")
 
     }
+
+
 
     return (
         <main> 

@@ -23,6 +23,10 @@ const Main = () => {
         }).catch((err) => console.log(err))
     }, [])
 
+    const handleNavigationPostId = (postId) => {
+        navigate(`/posts/${postId}`)
+    }
+
     return (
         <main>
             <div className="CreatePostSection">
@@ -54,7 +58,7 @@ const Main = () => {
                                         </img>
 
                                         <div className="postButtons">
-                                            <button>Comments</button>
+                                            <button onClick={()=>{handleNavigationPostId(post.id)}}>Comments</button>
                                             <button>Save</button>
                                         </div>
                                     </section>
@@ -62,7 +66,7 @@ const Main = () => {
                             )
                         })
                     }
-                    {
+                    {/* {
                         postInfo.map((post, key) => {
                             return (
                                 <div key={key} className='postsSectionContainer'>
@@ -86,7 +90,7 @@ const Main = () => {
                                 </div>
                             )
                         })
-                    }
+                    } */}
                 </div>
             </section>
 

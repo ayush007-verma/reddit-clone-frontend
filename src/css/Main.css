@@ -104,6 +104,17 @@ main {
 
     padding: 1%;
 
+
+    /* ######### */
+    
+    width : 40vw;
+
+    /* border :solid blue; */
+
+
+
+    /* ########### */
+
 }
 
 /* **********************************
@@ -122,6 +133,16 @@ voting Section... */
 
     height: 50%;
     font-size: 1.3rem;
+
+
+    /* ######### */
+    
+    /* border :solid red; */
+
+
+
+    /* ########### */
+
 }
 
 .votingSection>button {
@@ -158,6 +179,14 @@ AllPosts Section... */
     box-shadow: none;
 
 
+    /* ######### */
+    
+
+
+
+    /* ########### */
+
+
 }
 
 
@@ -186,6 +215,17 @@ AllPosts Section... */
     border-radius: 2%;
     padding : 1%;
 
+
+
+    /* ######### */
+    
+    width : 80%;
+
+    /* border :solid green; */
+
+
+
+    /* ########### */
 }
 
 .post>h3 {
@@ -204,6 +244,7 @@ AllPosts Section... */
 .post>img {
     height: 70%;
     width: 80%;
+
 }
 
 .postButtons {
