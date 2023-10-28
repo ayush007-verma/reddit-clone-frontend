@@ -4,8 +4,10 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 
 import './../css/Main.css'
+import { useNavigate } from 'react-router-dom'
 
 const Main = () => {
+    const navigate = useNavigate()
 
     const [postInfo, setPostInfo] = useState([])
     const [responsePost, setResponsePosts] = useState([])
@@ -26,7 +28,7 @@ const Main = () => {
             <div className="CreatePostSection">
                 <img src="https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-White-Dark-Background-Logo.wine.svg" alt="Reddit Logo">
                 </img>
-                <input placeholder="Create Post" />
+                <input placeholder="Create Post" onClick={()=> navigate("/submit") } />
                 <div className='createPostOptions'>
                     <a><i className="fa-solid fa-image"></i></a>
                     <a><i className="fa-solid fa-link"></i></a>
@@ -48,7 +50,7 @@ const Main = () => {
                                         <h3> {"aakash@chopra"} </h3>
                                         <h1 > {post.postTitle} </h1>
                                         <h4> {post.postContent} </h4>
-                                        <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_wide_w_320/lsci/db/PICTURES/CMS/369400/369435.jpg" alt="Reddit Logo">
+                                        <img src={post.postUrl } alt="Reddit Logo">
                                         </img>
 
                                         <div className="postButtons">
