@@ -19,16 +19,19 @@ const CommentsPostId = () => {
       .catch(error => console.error(error));
 
     console.log("comments", comments)
-  }, [newComment]);
+  }, []);
 
   const submitCommentForPostId = async (e) => {
     e.preventDefault()
     
-    const obj = {
-      userEmail : newUserEmail,
-      commentData : newCommentData
-    }
-    setNewComment(obj)
+    // const obj = {
+    //   userEmail : newUserEmail,
+    //   commentData : newCommentData
+    // }
+    // setNewComment(obj)
+
+    newComment.userEmail = newUserEmail;
+    newComment.commentData = newCommentData;
 
     await axios.post(`http://localhost:8080/api/comment/create/${postId}`, newComment)
       .then((res)=>{
