@@ -21,7 +21,7 @@ const Header = ({ showHeaderOptions, isLoggedIn }) => {
             {
                 showHeaderOptions ?
                     <div className="searchSection">
-                        <input type="text" placeholder="Search Reddit.." />
+                        <input type="text" placeholder="Search Reddit.." onClick={()=>{navigate("/search")}} />
                         {/* <button><i className="fa-solid fa-magnifying-glass"></i></button> */}
                     </div>
                     : <span></span>

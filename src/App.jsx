@@ -12,6 +12,7 @@ import Home from './components/Home/Home'
 import CreatePost from './components/Post/CreatePost'
 import PostId from './components/Post/PostId'
 import CommentsPostId from './components/Post/CommentsPostId'
+import Search from './components/Post/Search'
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/register" element={<><Header showHeaderOptions={false}/><Register/></>}/>
           <Route path="/submit" element={<><Header showHeaderOptions={false}/><CreatePost/></>}/>
           <Route path="/posts/:postId" element={<><Header showHeaderOptions={false}/><PostId/><CommentsPostId/></>}/>
-          {/* <Route path="/posts/:postId/comments" element={<><Header showHeaderOptions={false}/><CommentsPostId/></>}/> */}
+          <Route path="/search" element={<><Header showHeaderOptions={false}/><Search/></>}/>
         </Routes>
       </BrowserRouter>
 

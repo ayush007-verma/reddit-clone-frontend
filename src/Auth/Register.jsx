@@ -22,7 +22,6 @@ const Register = () => {
             .catch((err)=>console.log(err))
 
 
-
         inputUser.email = email
         inputUser.password = password
         inputUser.username = username
