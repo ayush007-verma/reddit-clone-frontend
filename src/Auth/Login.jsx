@@ -24,6 +24,7 @@ const Login = () => {
         // console.log(message, loggedIn)  
 
         if(loggedIn) navigate("/", {state : { loggedIn : loggedIn}})
+        
     }
 
     return (
